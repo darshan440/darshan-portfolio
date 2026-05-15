@@ -74,7 +74,7 @@ export function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 w-full glass border-t border-border/50 py-4 px-6 md:hidden flex flex-col gap-4"
+            className="absolute top-full left-0 w-full bg-background/80 backdrop-blur-3xl border-t border-border/50 py-6 px-6 md:hidden flex flex-col gap-4 shadow-2xl z-[100]"
           >
             {NAV_LINKS.map((link) => (
               <Link
