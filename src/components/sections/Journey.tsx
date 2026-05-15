@@ -32,7 +32,7 @@ const timeline = [
 export function Journey() {
   return (
     <section id="journey" className="py-24 relative">
-      <div className="container mx-auto px-6 md:px-12">
+      <div className="container mx-auto max-w-[1200px] px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ export function Journey() {
                 
                 {/* Content */}
                 <div className={`ml-12 md:ml-0 md:w-1/2 ${idx % 2 === 0 ? "md:pl-12 text-left" : "md:pr-12 md:text-right"}`}>
-                  <div className="glass p-6 rounded-2xl hover:bg-card/80 transition-colors">
+                  <div className="glass p-6 rounded-2xl hover:bg-white/10 transition-colors">
                     <span className="inline-block px-3 py-1 mb-4 text-xs font-semibold rounded-full bg-primary/10 text-primary border border-primary/20">
                       {item.year}
                     </span>

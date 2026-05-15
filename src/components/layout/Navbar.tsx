@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Logo } from "@/components/ui/Logo";
 
 const NAV_LINKS = [
   { name: "Home", href: "#home" },
@@ -33,9 +34,9 @@ export function Navbar() {
         scrolled ? "py-4 glass shadow-lg" : "py-6 bg-transparent"
       )}
     >
-      <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold tracking-tighter">
-          <span className="text-gradient">Darshan</span>
+      <div className="container mx-auto max-w-[1200px] px-6 md:px-12 flex items-center justify-between">
+        <Link href="/">
+          <Logo size="md" />
         </Link>
 
         {/* Desktop Nav */}

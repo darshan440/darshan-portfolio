@@ -5,19 +5,19 @@ import { motion } from "framer-motion";
 const skillsData = [
   {
     category: "Frontend",
-    items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion", "Shadcn/ui"],
+    items: ["Next.js", "React.js", "TypeScript", "JavaScript", "Tailwind CSS", "Framer Motion", "Radix UI", "Zustand"],
     color: "from-blue-500/20 to-blue-500/5",
     borderColor: "border-blue-500/20",
   },
   {
     category: "Backend & DB",
-    items: ["Node.js", "Express", "Firebase", "Firestore", "PostgreSQL", "REST APIs"],
+    items: ["Node.js", "Express.js", "Firebase", "MongoDB", "Prisma", "Redis", "Socket.io", "REST APIs"],
     color: "from-green-500/20 to-green-500/5",
     borderColor: "border-green-500/20",
   },
   {
-    category: "AI & Tools",
-    items: ["Python", "AI Integration", "Automation", "Git/GitHub", "Figma", "Vercel"],
+    category: "Tools & Perf",
+    items: ["Git/GitHub", "Vercel", "Sanity CMS", "Postman", "JWT", "SSR / SSG", "Web Vitals"],
     color: "from-purple-500/20 to-purple-500/5",
     borderColor: "border-purple-500/20",
   },
@@ -29,7 +29,7 @@ export function Skills() {
       {/* Decorative background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
+      <div className="container mx-auto max-w-[1200px] px-6 md:px-12 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ export function Skills() {
                 {category.items.map((skill) => (
                   <span
                     key={skill}
-                    className="px-4 py-2 text-sm font-medium bg-card/50 border border-border rounded-full hover:bg-card hover:border-primary/50 transition-colors shadow-sm"
+                    className="px-4 py-2 text-sm font-medium bg-white/5 border border-white/10 rounded-full hover:bg-white/10 hover:border-white/20 transition-colors shadow-sm cursor-default"
                   >
                     {skill}
                   </span>

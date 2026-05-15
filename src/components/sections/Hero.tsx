@@ -13,7 +13,7 @@ export function Hero() {
       {/* Subtle Grid Overlay */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-10 z-0 pointer-events-none" />
 
-      <div className="container relative z-10 px-6 mx-auto flex flex-col items-center text-center">
+      <div className="container relative z-10 px-6 mx-auto max-w-[1200px] flex flex-col items-center text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -71,9 +71,8 @@ export function Hero() {
           
           <a
             href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-medium rounded-full glass hover:bg-card/80 transition-colors"
+            download="Darshan_Thakkar_Resume.pdf"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-medium rounded-full glass hover:bg-white/10 transition-colors"
           >
             <Download size={16} />
             Download Resume
@@ -85,7 +84,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1 }}
-          className="absolute hidden lg:flex items-center justify-center top-1/4 -left-20 animate-float"
+          className="absolute hidden lg:flex items-center justify-center top-1/4 lg:left-0 xl:-left-20 animate-float"
         >
           <div className="glass p-4 rounded-2xl flex items-center gap-3">
             <div className="w-10 h-10 bg-[#3178C6]/20 rounded-xl flex items-center justify-center">
@@ -102,7 +101,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
-          className="absolute hidden lg:flex items-center justify-center bottom-1/4 -right-10 animate-float"
+          className="absolute hidden lg:flex items-center justify-center bottom-1/4 lg:right-0 xl:-right-10 animate-float"
           style={{ animationDelay: "1s" }}
         >
           <div className="glass p-4 rounded-2xl flex items-center gap-3">

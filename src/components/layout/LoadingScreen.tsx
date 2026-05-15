@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Logo } from "@/components/ui/Logo";
 
 export function LoadingScreen() {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,9 +30,9 @@ export function LoadingScreen() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl font-bold tracking-tighter text-gradient"
+              className="flex items-center justify-center"
             >
-              Darshan Thakkar
+              <Logo size="lg" />
             </motion.div>
             <motion.div
               className="absolute -bottom-4 left-0 h-[2px] bg-primary"
