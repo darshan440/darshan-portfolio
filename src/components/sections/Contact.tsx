@@ -17,12 +17,20 @@ export function Contact() {
 
   const onSubmit = async (data: FormData) => {
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "08df2d0b-d708-4094-948a-eaffcb834c78",
+          name: data.name,
+          email: data.email,
+          message: data.message,
+          subject: `New Message from Portfolio Contact Form - ${data.name}`,
+          from_name: "Portfolio Contact Form",
+        }),
       });
 
       const result = await response.json();
